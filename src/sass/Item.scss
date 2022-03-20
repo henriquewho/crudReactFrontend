@@ -1,0 +1,94 @@
+// media query 
+@mixin under600 {
+    @media (max-width: 600px) {
+        @content
+    }
+}
+@mixin under760 {
+    @media (max-width: 760px) {
+        @content
+    }
+}
+
+
+.edit-box {
+    color: navy; 
+    border: none;       // maybe its better without border, test it out
+    margin-left: 2%;
+    //height: 340px;
+    width: 70%;
+    padding: 1%; 
+    font-size: 1.3rem;
+
+    .edit-id {
+        color: navy; 
+        font-weight: bold;
+        display: flex;
+        justify-content: space-between;
+
+        @include under600 {
+            flex-direction: column;
+        }
+
+        input {
+            min-width: 250px; 
+            max-width: 350px;
+            background-color: rgb(238, 236, 236);
+            border: 1px solid black;
+            font-size: 1rem;
+            margin-left: 10px;
+            padding-left: 10px;
+        }
+    }
+
+    .editable-fields {
+        color: navy; 
+        font-weight: bold;
+
+        .item-content {
+            margin-top: 20px;
+            textarea {
+                font-size: 1.1rem;
+                width: 80%;
+                resize: none;
+                @include under760 {
+                    width: 100%;
+                }
+            }
+
+        }
+
+    
+        .user-rights {
+            margin-top: 20px;
+
+            select {
+                margin-left: 10px;
+            }
+
+        }
+        
+    }
+}
+
+.edit-buttons {
+    margin-top: 1%;
+    margin-left: 2%;
+    display: flex;
+    gap: 20px; 
+
+    .login-button {
+        background-color: rgb(167, 238, 167);
+        width: 120px;
+        font-weight: bold;
+        font-size: 1rem;
+    }
+
+    .login-clear {
+        background-color: rgb(245, 194, 194);
+        font-weight: bold;
+        font-size: 1rem;
+
+    }
+
+}
