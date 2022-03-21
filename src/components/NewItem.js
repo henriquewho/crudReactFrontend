@@ -34,7 +34,7 @@ function NewItem({user}) {
             setTimeout(()=>{
                 //history.push('/')
                 setMessage(null)
-                history.push('/')
+                history.push('/crudReactFrontend')
             }, 2000); 
         })
     }

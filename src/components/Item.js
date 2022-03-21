@@ -51,7 +51,7 @@ function Item({user}) {
                 setMessage({type: 'success-notification', msg: 'Item successfully updated'})
                 setTimeout(()=> {
                     setMessage(null)
-                    history.push('/')
+                    history.push('/crudReactFrontend')
                 }, 2000)
             })
         }
