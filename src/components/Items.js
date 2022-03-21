@@ -9,6 +9,10 @@ import Notification from './helperComponents/Notification'
 import { FaTrashAlt, FaEdit } from 'react-icons/fa'
 
 function Items({user}) {
+	const logout = () => {
+		window.localStorage.clear();
+		window.location.reload(); 
+	}
     const [allItems, setAllItems] = useState([])
     const currentUser = user; 
     itemService.setToken(currentUser.token)
@@ -21,10 +25,8 @@ function Items({user}) {
 
     return (
         <div>
-            <Title title='All Items' />
-            
+            <Title title='All Items' logout={logout}/>
             <ItemList items={allItems} setAllItems={setAllItems} user={user}/>
-
         </div>
     )
 }

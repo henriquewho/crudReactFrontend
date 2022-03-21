@@ -37,7 +37,7 @@ function Main({user}) {
 
                     <div className='main-menu-logout'>
                         <Link className='main-menu-cog' to={'/crudReactFrontend/config'} style={{textDecoration:'none', textDecorationColor:'none'}}> <FaUsersCog size={42}/> </Link>
-                        <div onClick={logout} className='main-menu-card'>
+                        <div onClick={logout} className='main-menu-card logout'>
                             Logout
                         </div>
                     </div>

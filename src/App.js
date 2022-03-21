@@ -5,11 +5,8 @@ import Main from './components/Main';
 
 const App = () => {
     const [user, setUser] = useState(null)
-	console.log('app loaded'); 
-
     useEffect(()=>{
         const loggedUserJSON = window.localStorage.getItem('loggedUserP1')
-		console.log('loggedUserJSON: ', loggedUserJSON); 
         if (loggedUserJSON){
             const user = JSON.parse(loggedUserJSON)
             setUser(user)
