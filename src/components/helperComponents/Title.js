@@ -5,7 +5,10 @@ function Title({title, logout}) {
 	if (title === 'All Items'){
 		return (
 			<div>
-				<h2 className='title'>{title} <button onClick={logout}>Logout</button> </h2>
+				<div className='all-items-title'>
+					<h2>{title}</h2>
+					<button className='logout-button' onClick={logout}>Logout</button> 
+				</div>
 				<hr  className='divider'/>
 			</div>
 		)

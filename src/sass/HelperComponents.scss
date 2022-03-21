@@ -5,6 +5,35 @@
     padding-top: 3%; 
 }
 
+.all-items-title {
+    padding-left: 3%;
+    padding-top: 3%; 
+    display: flex ;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
+
+    .logout-button {
+        width: 100px;
+        height: 40px;
+        background-color: rgb(252, 135, 135);
+        border-radius: 0%;
+        font-size: 1rem; 
+        font-weight: 400;
+
+        &:hover {
+            transform: scale(0.95);
+        }
+
+        &:active {
+            background-color: rgb(202, 107, 107);
+        }
+
+    }
+    
+}
+
 .divider {
     margin: 1%; 
     width: 90%;
