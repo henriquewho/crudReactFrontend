@@ -74,7 +74,7 @@ const ItemList = ({items, setAllItems, user}) => {
 
                                 <td className='items-delete-column'> <FaTrashAlt className='item-icon' onClick={()=>handleDelete(each.id, each.user)}/> </td>
 
-                                <td className='items-edit-column'> <Link to={`/item/${each.id}`}><FaEdit className='item-icon'/> </Link> </td>
+                                <td className='items-edit-column'> <Link to={`/crudReactFrontend/item/${each.id}`}><FaEdit className='item-icon'/> </Link> </td>
                             </tr>
                         })
                     }

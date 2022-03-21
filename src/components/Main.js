@@ -1,5 +1,5 @@
 import React from 'react'
-import {BrowserRouter as Router, Switch, Route, Link} from 'react-router-dom'
+import {BrowserRouter as Router, Switch, Route, Link, useHistory} from 'react-router-dom'
 import Config from './Config'
 import Items from './Items'
 import Item from './Item'
@@ -11,8 +11,9 @@ import NewItem from './NewItem'
 function Main({user}) {
 
     const logout = () =>{
-        window.localStorage.removeItem('loggedUserP1')
-        window.location.reload()
+        window.localStorage.clear();
+		window.location.href='/crudReactFrontend';
+        window.location.reload();
     }
 
     return (
@@ -20,7 +21,6 @@ function Main({user}) {
             <Router>
                 <div className='main-navbar'>
                     <div className='main-menu'>
-
                             <Link to={'/crudReactFrontend'} style={{textDecoration:'none', color: 'black'}} className='main-menu-home'>
                                 <FaHome size={50} className='menu-home'/>
                             </Link>
