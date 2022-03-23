@@ -60,7 +60,7 @@ function NewItem({user}) {
                     <Notification message={message}/> 
                 </div>
                 <div className='edit-buttons'>
-                    <Link to={'/'}><button className='login-clear'>Cancel</button></Link>
+                    <Link to={'/crudReactFrontend'}><button className='login-clear'>Cancel</button></Link>
                     <button className='login-button' onClick={create}>Create New</button>
                 </div>
             </div>

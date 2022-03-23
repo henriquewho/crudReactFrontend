@@ -92,7 +92,7 @@ function Item({user}) {
                 
             </div>
             <div className='edit-buttons'>
-                <Link to={'/'}><button className='login-clear'>{backButton}</button></Link>
+                <Link to={'/crudReactFrontend'}><button className='login-clear'>{backButton}</button></Link>
                 <button className='login-button' onClick={save}>Save</button>
             </div>
             
